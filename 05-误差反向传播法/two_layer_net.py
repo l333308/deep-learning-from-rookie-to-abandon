@@ -53,6 +53,7 @@ class TwoLayerNet:
 
         return grads
 
+    # 误差反向传播算法求梯度 layer + OrderedDict
     def gradient(self, x, t):
         # forward
         self.loss(x, t)

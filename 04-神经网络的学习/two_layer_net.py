@@ -41,6 +41,7 @@ class TwoLayerNet:
         return accuracy
         
     # x:输入数据, t:监督数据
+    # 数值微分求梯度
     def numerical_gradient(self, x, t):
         loss_W = lambda W: self.loss(x, t)
         
@@ -52,6 +53,7 @@ class TwoLayerNet:
         
         return grads
         
+    # 误差反向传播算法求梯度 手动计算
     def gradient(self, x, t):
         W1, W2 = self.params['W1'], self.params['W2']
         b1, b2 = self.params['b1'], self.params['b2']
